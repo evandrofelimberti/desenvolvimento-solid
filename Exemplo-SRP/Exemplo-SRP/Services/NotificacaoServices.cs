@@ -7,14 +7,11 @@ namespace Exemplo_SRP.Services
 {
     public class NotificacaoServices
     {
-        private Notificacao _notificacao;        
         public void NotificacaoRegistrar(Notificacao notificacao)
         {
-            _notificacao = notificacao;
-
-            NotificacaoDados.notificacoes.Add(_notificacao);
+            NotificacaoDados.notificacoes.Add(notificacao);
             
-            NotificacaoEmailServices notificacaoEmailServices = new NotificacaoEmailServices(_notificacao);
+            NotificacaoEmailServices notificacaoEmailServices = new NotificacaoEmailServices(notificacao);
             notificacaoEmailServices.ValidarEmail();
             notificacaoEmailServices.EnviarEmail();
 

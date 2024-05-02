@@ -8,7 +8,7 @@ namespace Exemplo_SRP
 {
     public class Notificacao
     {
-        public string Descricao { get; set; }
+        public string Descricao { get; set; }  = string.Empty;
         public int Codigo { get; set; }
         public EnumTipoNotificacao TipoNotificacao { get; set; }
     }
